@@ -1,0 +1,19 @@
+#
+#Thu Feb 05 09:34:49 PST 2015
+enabled=true
+initdb=false
+initScript=${GEOSERVER_DATA_DIR}/jdbcconfig/scripts/initdb.oracle.sql
+import=false
+#jdbcUrl=jdbc\:oracle\:thin\:@//localhost\:1521/giswebdb
+driverClassName=oracle.jdbc.driver.OracleDriver
+username=GEOSERVER
+password=
+pool.minIdle=4
+pool.maxActive=10
+pool.poolPreparedStatements=true
+pool.maxOpenPreparedStatements=50
+
+#be sure that if you're using oracle and validating your db connections 
+#you change the default validation query.
+pool.testOnBorrow=true
+pool.validationQuery=SELECT 1 from dual
